@@ -61,14 +61,21 @@ def handle_ticket_purchase(total_tickets, max_tickets):
 def sell_tickets():
 
     # Initialize the variables and accumulator.
-    total_tickets = 20 # total tickets available for purchase
-    max_tickets = 4  # Maximum amount of tickets per buyer
-    total_buyers = 0   # Accumulator for the number of buyers
+    # Total tickets available for purchase
+    total_tickets = 20
+
+    # Maximum number of tickets per buyer
+    max_tickets = 4
+
+    # Accumulator for the number of buyers
+    total_buyers = 0
 
     # While loop to continue the program until all the tickets are sold.
     while total_tickets > 0:
         tickets_bought, total_tickets = handle_ticket_purchase(total_tickets, max_tickets)
+
         total_buyers += 1
+
         print(f'Thank you for your purchase. {tickets_bought} ticket(s) bought.'
               f'{total_tickets} tickets left.')
 
