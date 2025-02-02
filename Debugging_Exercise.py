@@ -47,7 +47,7 @@ def main():
             print()
         except ValueError as e:
             print(f"Error with product {product['name']}: {e}")
-            print()
+
 
 
 if __name__ == "__main__":
