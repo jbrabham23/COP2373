@@ -69,7 +69,7 @@ def main():
         for keyword in found_keywords:
             print(f'- {keyword}')
     else:
-        print('No spam indicators found.')
+        print('No spam keywords/phrases found.')
 
 # Call the main function
 if __name__ == "__main__":
