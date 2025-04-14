@@ -4,11 +4,14 @@
 
 import numpy as np
 
+# The load_data function reads the CSV file and returns only specific columns.
 def load_data(filename):
     # Load only the exam score columns
     data = np.genfromtxt(filename, delimiter=',', skip_header=1, usecols=(2, 3, 4))
     return data
 
+# The calculate_statistics function calculates the mean, median, standard deviation,
+# minimum, and maximum of each exam and of all the exams combined.
 def calculate_statistics(data):
     print("For each exam:")
     for i in range(data.shape[1]):
@@ -28,6 +31,7 @@ def calculate_statistics(data):
     print(f"Minimum: {np.min(all_grades)}")
     print(f"Maximum: {np.max(all_grades)}")
 
+# The pass_fail function determines how many of the exams were failed or passed.
 def pass_fail(data):
     print("\nPass/Fail Per Exam")
     for i in range(data.shape[1]):
@@ -42,6 +46,7 @@ def pass_fail(data):
     pass_percentage = (total_passes / total_grades) * 100
     print(f"Pass Percentage: {pass_percentage:.2f}%")
 
+# The main function opens the grades.csv file and runs the flow of the program.
 def main():
     filename = 'grades.py'
     data = load_data(filename)
